@@ -9,85 +9,139 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Static Top Navbar Example for Bootstrap</title>
+    <title>Suzanne O'Meara</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="navbar-static-top.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="css/navbar-static-top.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<link href='//fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+	
   </head>
-
-  <body>
+  
+  <body onload="on_load()" onresize="on_load()">
 
     <!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
+      <div class="container" id="school_holder">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <p id="name_label">Suzanne O'Meara</p>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+            <li><a href="#" onclick="change_jumbotron('about_jumbotron')">About</a></li>
+            <li><a href="#" onclick="change_jumbotron('education_jumbotron')">Education</a></li>
+			<li><a href="#" onclick="change_jumbotron('resume_jumbotron')">Resume</a></li>
+			<li><a href="#" onclick="change_jumbotron('contact_jumbotron')">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-
+	
     <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+      <div class="jumbotron" id = "about_jumbotron">
+			<table><tr>
+				<th id="selfie"><img src="portrait.png"></th>
+				<th id="intro_p"><p style="font-size:40px;">Hello,</p> <p>my name is Suzanne. I develop websites, perform research, and study  
+				electrical engineering and computer science at MIT. </p> <p> Look around
+				to find more information about my skills, interests, and projects.</th>
+			</tr></table>
         </p>
       </div>
+	
+	  <div class="jumbotron" style="display: none;" id="education_jumbotron">
+		<table id="schools" cellspacing="10">
+			<tr>
+				<th class="school_hold">
+					<img src="MIT-logo.jpg" id="MIT_pic" style="display:block" class="school" onclick="flip_school('MIT_pic','hidden_MIT')">
+					<div class="hidden_school" id="hidden_MIT" style="display: none" onclick="flip_school('hidden_MIT','MIT_pic')"> 
+						<h2 class="school_title">MIT</h2>
+						<p class="school_body" style="font-size: 12px;"><b>Coursework: </b><br>
+						Computation Structures: A <br>
+						Introduction to Algorithms: In progress <br>
+						Software Construction: In progress <br>
+						Signals and Systems: In progress</p>
+						</div></th>
+				<th><div class="spacer" id="spacer_1"></div></th>
+				<th class="school_hold">
+					<img src="uw_icon.png" id="UW_pic" style="display:block" class="school" onclick="flip_school('UW_pic','hidden_UW')">
+					<div class="hidden_school" id="hidden_UW" style="display: none" onclick="flip_school('hidden_UW','UW_pic')"> 
+						<h2 class="school_title">UW-Madison</h2>
+						<p class="school_body" style="font-size: 12px;"><b>Coursework:</b> <br>
+						Physics (Mechanics): A <br>
+						Physics (E&M): A <br>
+						Multivariable Calculus: A <br>
+						Linear Algebra & DiffEqs: A <br>
+						</p>	
+						</div></th>
+				<th><div class="spacer" id="spacer_2"></div></th>
+				<th class="school_hold">
+					<img src="wesths.jpg" id="west_pic" style="display:block" class="school" onclick="flip_school('west_pic','hidden_west')">
+					<div class="hidden_school" id="hidden_west" style="display: none" onclick="flip_school('hidden_west','west_pic')"> 
+						<h2 class="school_title">West High School</h2>
+						<p class="school_body" style="font-size: 12px;">GPA: 4.0 <br>
+						Student Body Vice President <br>
+						Programming Club Founder <br> 
+						Graduated with High Honors <br></p>
+						</div></th>
+			</tr>
+		</table>
+	  </div>
+	  
+	  <div class="jumbotron" style="display: none;" id="contact_jumbotron">
+		<h1 style="font-size: 30px">How to Reach Me</h1>
+			<p>Email: someara@mit.edu</p>
+			<p>Phone: (608)-445-5733</p>
+	  </div>
+	  
+	  <div class="jumbotron" style="display: none;" id="resume_jumbotron">
+		<img id="resume_pic" src="resume-1.png"/>
+	  </div
 
     </div> <!-- /container -->
 
-
+	<script>
+		function change_jumbotron(new_jumbotron){
+			document.getElementById('about_jumbotron').style.display = "none";
+			document.getElementById('education_jumbotron').style.display = "none";
+			document.getElementById('contact_jumbotron').style.display = "none";
+			document.getElementById('resume_jumbotron').style.display = "none";
+			
+			document.getElementById(new_jumbotron).style.display = "block";
+		}
+		
+		function flip_school(old_display,new_display) {
+			document.getElementById(old_display).style.display = "none";
+			document.getElementById(new_display).style.display = "block";
+		}
+		
+		function on_load() {
+			//alert('hello');
+			var width = document.getElementById('school_holder').offsetWidth;
+			spacing = width - 550;
+			space = spacing/6;
+			//alert(space);
+			document.getElementById('spacer_1').style.width = space + "px";
+			document.getElementById('spacer_2').style.width = space + "px";
+			//alert('done');
+		}
+		
+	</script>
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
