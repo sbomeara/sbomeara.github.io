@@ -1,152 +1,269 @@
 <!DOCTYPE html>
+<!-- Template by Quackit.com -->
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
+    <link rel = "icon" href = "./pictures/bulb.ico">
     <title>Suzanne O'Meara</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/navbar-static-top.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	<link href='//fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
-	
-  </head>
-  
-  <body onload="on_load()" onresize="on_load()">
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container" id="school_holder">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
-          <p id="name_label">Suzanne O'Meara</p>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Suzanne O'Meara</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" onclick="change_jumbotron('about_jumbotron')">About</a></li>
-            <li><a href="#" onclick="change_jumbotron('education_jumbotron')">Education</a></li>
-	    <li><a href="resume_someara.pdf" target="_blank">Resume</a></li>
-	    <li><a href="#" onclick="change_jumbotron('contact_jumbotron')">Contact</a></li>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Projects</a></li>
+            <li><a href="info_me.html">About Me</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-	
+    <!-- Content -->
     <div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron" id = "about_jumbotron">
-			<table><tr>
-				<th id="selfie"><img src="portrait.png"></th>
-				<th id="intro_p"><p style="font-size:40px;">Hello,</p> <p>My name is Suzanne. I develop websites, perform research, and study  
-				electrical engineering and computer science at MIT. </p> <p> Look around to find my resume and more information about me.</th>
-			</tr></table>
-      </div>
-	
-	  <div class="jumbotron" style="display: none;" id="education_jumbotron">
-		<table id="schools" cellspacing="10">
-			<tr>
-				<th class="school_hold">
-					<img src="MIT-logo.jpg" id="MIT_pic" style="display:block" class="school" onclick="flip_school('MIT_pic','hidden_MIT')">
-					<div class="hidden_school" id="hidden_MIT" style="display: none" onclick="flip_school('hidden_MIT','MIT_pic')"> 
-						<h2 class="school_title">MIT</h2>
-						<p class="school_body" style="font-size: 12px;"><b>Coursework: </b><br>
-						Computation Structures: A <br>
-						Introduction to Algorithms: In progress <br>
-						Software Construction: In progress <br>
-						Signals and Systems: In progress</p>
-						</div></th>
-				<th><div class="spacer" id="spacer_1"></div></th>
-				<th class="school_hold">
-					<img src="uw_icon.png" id="UW_pic" style="display:block" class="school" onclick="flip_school('UW_pic','hidden_UW')">
-					<div class="hidden_school" id="hidden_UW" style="display: none" onclick="flip_school('hidden_UW','UW_pic')"> 
-						<h2 class="school_title">UW-Madison</h2>
-						<p class="school_body" style="font-size: 12px;"><b>Coursework:</b> <br>
-						Physics (Mechanics): A <br>
-						Physics (E&M): A <br>
-						Multivariable Calculus: A <br>
-						Linear Algebra & DiffEqs: A <br>
-						</p>	
-						</div></th>
-				<th><div class="spacer" id="spacer_2"></div></th>
-				<th class="school_hold">
-					<img src="wesths.jpg" id="west_pic" style="display:block" class="school" onclick="flip_school('west_pic','hidden_west')">
-					<div class="hidden_school" id="hidden_west" style="display: none" onclick="flip_school('hidden_west','west_pic')"> 
-						<h2 class="school_title">West High School</h2>
-						<p class="school_body" style="font-size: 12px;">GPA: 4.0 <br>
-						Student Body Vice President <br>
-						Programming Club Founder <br> 
-						Graduated with High Honors <br></p>
-						</div></th>
-			</tr>
-		</table>
-	  </div>
-	  
-	  <div class="jumbotron" style="display: none;" id="contact_jumbotron">
-		<h1 style="font-size: 30px">How to Reach Me</h1>
-			<p>Email: someara@mit.edu</p>
-			<p>Phone: (608)-445-5733</p>
-	  </div>
-	  
-	  <div class="jumbotron" style="display: none;" id="resume_jumbotron">
-		  <a href="resume.pdf" target="_blank">View or Download</a>
-	  </div
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Portfolio
+                    <small>Recent Work</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
 
-    </div> <!-- /container -->
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <h2 href="./6.115.html">
+                    <img class="img-responsive" src=".\pictures\6.115_final_2.jpg" alt="6.1151 Touchless Whack-a-Mole Game Board">
+                </h2>
+                <h3>
+                <p href="./6.115.html">6.1151 Touchless Whack-a-Mole</a>
+                </h3>
+                <p>For my "Microcomputer Project Laboratory" final project, I designed and implemented a whack-a-mole style game
+                  using infrared sensing and frequency recognition. For this project, I used an Intel MCS-51 chip and a PSoC 6. I designed
+                  and built all of the electrical and mechanical components myself, and wrote code to identify signals of different frequencies
+                  coming from the infrared phototransistors.  </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="6.334.html">
+                    <img class="img-responsive" src=".\pictures\buck.png" alt="Schematic of Simplified Buck Converter">
+                </p>
+                <h3>
+                    <p href="./6.334.html">6.334 Power Electronics Design Project</a>
+                </h3>
+                <p> The final project for 6.334 (Power Electronics) requires students to design a buck converter at a high level of detail
+                under challenging constraints. I calculated what values would be acceptable for the passive and switching components in the converter,
+                and specified parts based on those requirements. I then assessed the losses in each part of the converter and designed a control scheme to
+                keep the converter operating within its specifications.  </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./perg.html">
+                    <img class="img-responsive" src="./pictures/MLI.png">
+                </p>
+                <h3>
+                    <p href="./perg.html">Power Electronics Group UROP</a>
+                </h3>
+                <p>With the Power Electronics Group at the Research Laboratory of Electronics at MIT, I am designing a lightweight high-voltage multi-level step up inverter.
+                For this project, I have used LTSpice and MATLAB to analyze the performance of various switched-cap multi-level inverter topologies. Over the next few months,
+                I will select a specific topology to build, source components, layout the PCB, and then test the converter's performance.  </p>
+            </div>
+		    </div>
+		    <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <p href="./Lincoln.html">
+                    <img class="img-responsive" src=".\pictures\LL.png" alt="Apple Logo">
+                </p>
+                <h3>
+                    <p href="./Lincoln.html">Lincoln Laboratory Internship</a>
+                </h3>
+                <p> Implemented a module in C++ for telemetry applications. </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./MET.html">
+                    <img class="img-responsive" src=".\pictures\Milwaukee.jpg" alt="Picture of Cart with PCB on top">
+                </p>
+                <h3>
+                    <p href="./MET.html">Milwaukee Tool Internship </a>
+                </h3>
+                <p> I interned in the Advanced Engineering department at Milwaukee Tool over Summer 2018. I performed a full benchmarking and
+                teardown of a competitor motor drive, which involved assessing power delivery, thermal performance, and EMC. I also began
+                 testing of a new motor control platform. </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./apecs.html">
+                    <img class="img-responsive" src="./pictures/apecs_pic.png" alt="">
+                </p>
+                <h3>
+                    <p href="./apecs.html">APECS</a>
+                </h3>
+                <p>While working in the Jensen Laboratory in the MIT Chemical Engineering Department, I built a web application and data storage
+                and communication scheme to remotely control a robotic system for autonomous chemistry. This involved using forward and reverse
+                kinematics to path-plan for a 6-degree of freedom robotic arm within the system. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <p href="./button_bank.html">
+                    <img class="img-responsive" src="./pictures/button_bank.png" alt="">
+                </p>
+                <h3>
+                    <p href="./button_bank.html">MY18 Button Bank</a>
+                </h3>
+                <p>For the MIT FSAE Model Year 18 vehicle, I designed, built, and tested the button bank. This PCB takes driver input and relays
+                  that information to the rest of the electrical system over CAN. The board is based around an LPC11C14 microcontroller. </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./HVDCDC.html">
+                    <img class="img-responsive" src="./pictures/HVDCDC.jpg" alt="">
+                </p>
+                <h3>
+                    <p href="./HVDCDC.html">MY17 HVDCDC</a>
+                </h3>
+                <p>For the MIT FSAE Model Year 17 vehicle, I redesigned, built, and tested the high voltage DC to DC converter board.
+                The board required a redesign because it was generating too much ripple on the voltage source for the vehicle's LV system.
+               I added input and output filtering to the converter which decreased the ripple magnitude.  </p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./MY19_system.html">
+                    <img class="img-responsive" src="./pictures/system_schematic.png" alt="">
+                </p>
+                <h3>
+                    <p href="./MY19_system.html">MY19 EE System Design</a>
+                </h3>
+                <p>As the electrical systems lead for the MIT FSAE team, I architected the low voltage system and personally designed the vehicle control unit.
+                </p>
+            </div>
+          </div>
+            <div class="col-md-4 portfolio-item">
+                <p href="./6.131.html">
+                    <img class="img-responsive" src="./pictures/flyback.png" alt="">
+                </p>
+                <h3>
+                    <p href="./6.131.html">6.131 Projects</a>
+                </h3>
+                <p>For the course "Power Electronics Laboratory" at MIT, I designed and built a buck converter, boost converter, and double flyback converter for various applications.</p>
+            </div>
+        </div>
+	</div>
+        <!-- /.row -->
 
-	<script>
-		function change_jumbotron(new_jumbotron){
-			document.getElementById('about_jumbotron').style.display = "none";
-			document.getElementById('education_jumbotron').style.display = "none";
-			document.getElementById('contact_jumbotron').style.display = "none";
-			document.getElementById('resume_jumbotron').style.display = "none";
-			
-			document.getElementById(new_jumbotron).style.display = "block";
-		}
-		
-		function flip_school(old_display,new_display) {
-			document.getElementById(old_display).style.display = "none";
-			document.getElementById(new_display).style.display = "block";
-		}
-		
-		function on_load() {
-			//alert('hello');
-			var width = document.getElementById('school_holder').offsetWidth;
-			spacing = width - 550;
-			space = spacing/6;
-			//alert(space);
-			document.getElementById('spacer_1').style.width = space + "px";
-			document.getElementById('spacer_2').style.width = space + "px";
-			//alert('done');
-		}
-		
-	</script>
-	
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+        <!-- Projects Row -->
+		<!--
+        <div class="row">
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="./pictures/zr.jpg" alt="">
+                </a>
+                <h3>
+                    <a href="./zr.html">Zero Robotics and the Space Systems Laboratory</a>
+                </h3>
+                <p>I coded the front and and back end of the challenge for the Coding version of Zero Robotics.</p>
+            </div>
+
+		-->
+<!--
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://lorempixel.com/700/400/nature/5" alt="">
+                </a>
+                <h3>
+                    <a href="#">Project Title</a>
+                </h3>
+                <p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://lorempixel.com/700/400/nature/6" alt="">
+                </a>
+                <h3>
+                    <a href="#">Project Title</a>
+                </h3>
+                <p>Upon yielding, kind sea subdue very seed sixth them lesser one lesser there earth days were multiply so sixth gathering fifth that man fowl made.</p>
+            </div>
+        </div>
+-->
+        <!-- Pagination -->
+      <!--   <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- /.row -->
+
+		<hr>
+
+        <!-- Footer -->
+        <!-- <footer> -->
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-12"> -->
+                    <!-- <p>Copyright &copy; Example.com 2015</p> -->
+                <!-- </div> -->
+            <!-- </div> -->
+            <!-- /.row -->
+        <!-- </footer> -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 </html>

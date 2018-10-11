@@ -1,2 +1,2 @@
-# sbomeara.github.io
+# someara.github.io
 personal website

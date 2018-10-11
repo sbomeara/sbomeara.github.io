@@ -1,0 +1,144 @@
+<!--file:///Users/katherinepaseman/dropbox%20(mit)/Kat%20Portfolio/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+img {
+    height: auto;
+    max-width: 100%;
+}
+#banner {
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+#feature {
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../Kat Portfolio/favicon.ico">-->
+    <link rel = "icon" href = "favicon.ico">
+
+    <title>Charging Shutdown Board</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/header.css" rel="stylesheet">
+
+    <!-- custom column for this template -->
+    <link href="./css/column.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Suzanne O'Meara</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./index.html">Projects</a></li>
+            <li><a href="info_me.html">About Me</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+<div class="column">
+
+          <br> <br> <br>
+<img class="img-responsive" src="./pictures/CSB_2D.JPG" alt="Charging Shutdown Board Layout" style="margin:40px -25px"  >
+ </div>
+
+
+        <div class="column">
+          <br> <br> <br>
+              <div class="header">
+                  <h1 style="margin:40px 0px">Charging Shutdown Board </h1>
+                <font size "1"> fall '17 </font>
+
+                  <p class="lead"> <font color=#000000> technical skills: </font> <font color=#7F7E7E> Altium, HV electronics safety </font><br>
+                  <font color=#000000>soft skills: </font><font color=#7F7E7E>iterative design review, team coordination </font></p>
+
+                <p >
+                  Since summer of 2017, my main commitment has been building an electric racecar with MIT’s FSAE Electric Racecar Team. I love being a part of MIT FSAE because everyone is driven by a clear goal: making our car run as fast as possible. Being part of a team that is characterized by this dedication to quality drives me and every member to be the best engineer possible.
+
+<br> <br>
+                  This semester I've been working on the charging shutdown board. At a high level, this board determines whether or not our car is safe to charge. The previous board reflected a somewhat clumsy and esoteric solution to this problem. It featured a binary signal that determined safety and then charged our car using a pre-set charging profile. This process was so poorly documented and non-intuitive that only three people on the team knew how to use it.
+
+<br> <br>
+                  I made several improvements.
+                  First, I added a microcontroller to process the Battery Management System outputs. This lets us determine how much power we want our charger to output based on how charged the battery is and to compile more data about our battery and charging characteristics.
+                Second, I enabled a customizable charging profile. By sending CAN messages with detailed charging data instead of a binary signal, we’re able to change our charging profile based on factors such as how quickly we want to charge our system or the available power supply of our charger.
+
+<br> <br>
+                  Ultimately, I took a board that was necessary for our car to function and made it a feature that allows our battery to be managed as flexibly and efficiently as possible.
+</p>
+
+                  </div>
+
+                  </div>
+
+             </div>
+
+
+</div>
+
+</div>
+
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
